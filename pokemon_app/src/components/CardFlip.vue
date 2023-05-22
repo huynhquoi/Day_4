@@ -4,19 +4,19 @@
     :class="{ disabled: isDisabled }"
     :style="{
       height: `${
-        (920 - 16 * Math.sqrt(cardContext.length)) /
+        (880 - 16 * Math.sqrt(cardContext.length)) /
           Math.sqrt(cardContext.length) -
         16
       }px`,
       width: `${
-        (((920 - 16 * Math.sqrt(cardContext.length)) /
+        (((880 - 16 * Math.sqrt(cardContext.length)) /
           Math.sqrt(cardContext.length) -
           16) *
           3) /
         4
       }px`,
       perspective: `${
-        ((((920 - 16 * Math.sqrt(cardContext.length)) /
+        ((((880 - 16 * Math.sqrt(cardContext.length)) /
           Math.sqrt(cardContext.length) -
           16) *
           3) /
