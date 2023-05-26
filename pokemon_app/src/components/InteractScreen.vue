@@ -23,12 +23,15 @@
         :cardContext="cardContext"
         @onFlip="checkRule($event)"
       />
+      <set-time-end-game />
     </div>
   </div>
 </template>
 
 <script>
 import CardFlip from "./CardFlip.vue";
+import SetTimeEndGame from "./SetTimeEndGame.vue";
+
 export default {
   props: {
     cardContext: {
@@ -40,6 +43,7 @@ export default {
   },
   components: {
     CardFlip,
+    SetTimeEndGame,
   },
   data() {
     return {

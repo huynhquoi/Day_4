@@ -97,7 +97,9 @@ export default {
       this.isFlipped = false;
     },
     onEnabled() {
-      this.isDisabled = true;
+      setTimeout(() => {
+        this.isDisabled = true;
+      }, 1200);
     },
   },
 };
@@ -115,10 +117,11 @@ export default {
 .card__inner {
   width: 100%;
   height: 100%;
-  transition: transform 1s;
+  /* transition: transform 1s; */
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .card__inner.is-flipped {
@@ -143,6 +146,7 @@ export default {
   background-color: var(--light);
   transform: rotateY(-180deg);
 }
+
 .card__face--back .card__content {
   background-size: contain;
   background-position: center;
@@ -153,5 +157,8 @@ export default {
 
 .card.disabled .card__inner {
   cursor: default;
+  transform: scale(0.8);
+  opacity: 0;
+  /* display: none; */
 }
 </style>
